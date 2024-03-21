@@ -735,7 +735,9 @@ a.toolitem:hover {
 #collapseButton {
     display: none;
     background-color: black;
-    
+    color: black;
+    text-decoration: none;
+    border: none;
 }
 
 
