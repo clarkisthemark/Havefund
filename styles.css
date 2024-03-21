@@ -756,3 +756,154 @@ a.toolitem:hover {
 
 
 */
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    /*  Index */
+    
+        .indextree {
+            max-height: 110vw;
+        }
+        
+        .introtext {
+            font-size: 5vw;
+        }
+        
+        h1 {
+            font-size: 5vw;
+        }
+        
+        .boxtext {
+            font-size: 3vw;
+        }
+        
+        .boximg {
+            max-width: 17vw;
+        }
+        
+        .indexfooter {
+            font-size: 8vw;
+        }
+    
+    
+    /*  Subpages */
+    
+    .headername {
+        font-size: 6vw;
+    }
+    
+    .headerdescription {
+        font-size: 2.5vw;
+    }
+        
+    .main-content {
+            max-width: 90vw;
+        }
+    
+    h3 {
+        font-size: 3.5vw;
+        text-align: left;
+    }
+    
+    h4 {
+        font-size: 2.5vw;
+    }
+    
+    p {
+        font-size: 2.2vw;
+    }
+    
+        #pagemenu {
+            background-color: black;
+            overflow: hidden;
+            margin-top: 0%;
+            padding-top: 4vw;
+            padding-bottom: 5vh;
+            z-index: 1;
+            width: 100%;
+        }
+        
+    .pagemenuitem {
+        font-size: 3.5vw;
+    }
+    
+        a.pagemenuitem:link {
+            line-height: 2.5vh;
+        }
+        
+        .toptools {
+            padding-bottom: 5%;
+        }
+    .toolitem {
+        z-index: 1;
+        font-size: 3vw;
+    }
+    
+        .toolsused {
+            line-height: 4vw;
+            z-index: 1;
+        }
+        
+       #collapseButton {
+        display: none;
+        position: fixed;
+        top: 0vh;
+        width: 100%;
+        margin-bottom: 0;
+        color: green;
+        background-color: black;
+        z-index: 1;
+           border: none;
+           padding-top: 1%;
+           padding-bottom: 1%;
+        }
+        
+        
+        
+        
+        
+    /*  Footer */
+    
+        .footername {
+            font-size: 8vw;
+        }
+        
+        .footerdescription {
+            font-size: 3vw;
+        }
+    
+        .footercopy {
+            font-size: 2vw;
+        }
+    
+        .footerli {
+            font-size: 1.5vw;
+            padding-left: 1;
+            padding-right: 1;
+        }
+        
+        .footerlist {
+            padding-right: 5%;
+        }
+    
+        .disclaimer {
+            font-size: 1.6vw;
+        }
+        
+    /*  Header */
+    
+        
+        .topnav a {
+            font-size: 3vw;
+        }
+        
+        .dropdown .dropbtn {
+            font-size: 3vw;
+        }
+    
+        .coinlogo {
+            max-height: 4vw;
+        }
+        
+        
+    }
+
