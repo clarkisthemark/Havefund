@@ -799,6 +799,7 @@
                                           
                                           /*  Subpages */
                                           
+                                          
                                           .headername {
                                               font-size: 6vw;
                                           }
@@ -897,7 +898,7 @@
                                               }
                                           
                                               .footercopy {
-                                                  font-size: 2vw;
+                                                  font-size: 1.5vw;
                                               }
                                           
                                               .footerli {

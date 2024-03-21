@@ -15,14 +15,36 @@ $(window).scroll(function() {
   
   /* Scroll percentage */
   
-   window.onscroll = function() {myFunction()};
+  window.addEventListener('scroll', throttle(myScroll, 80));
   
-  window.addEventListener('scroll', function() {
-          var winScroll = window.scrollY;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";});
+  // Throttle function
+  function throttle(func, limit) {
+      let lastFunc;
+      let lastRan;
+      return function() {
+          const context = this;
+          const args = arguments;
+          if (!lastRan) {
+              func.apply(context, args);
+              lastRan = Date.now();
+          } else {
+              clearTimeout(lastFunc);
+              lastFunc = setTimeout(function() {
+                  if ((Date.now() - lastRan) >= limit) {
+                      func.apply(context, args);
+                      lastRan = Date.now();
+                  }
+              }, limit - (Date.now() - lastRan));
+          }
+      };
+  }
   
+  function myScroll() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+  }
   
   
   $(window).scroll(function(){
