@@ -801,22 +801,22 @@ a.toolitem:hover {
         }
     
     h3 {
-        font-size: 5vw;
+        font-size: 6vw;
         text-align: left;
     }
     
     h4 {
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
     
     p {
-        font-size: 3.2vw;
+        font-size: 3.5vw;
     }
     
         #pagemenu {
             background-color: black;
             overflow: hidden;
-            margin-top: 0%;
+            margin-top: 4%;
             padding-top: 4vw;
             padding-bottom: 5vh;
             z-index: 1;
@@ -824,11 +824,11 @@ a.toolitem:hover {
         }
         
     .pagemenuitem {
-        font-size: 3.5vw;
+        font-size: 4.5vw;
     }
     
         a.pagemenuitem:link {
-            line-height: 2.5vh;
+            line-height: 4vh;
         }
         
         .toptools {
@@ -836,12 +836,15 @@ a.toolitem:hover {
         }
     .toolitem {
         z-index: 1;
-        font-size: 3vw;
+        font-size: 4.5vw;
     }
     
         .toolsused {
-            line-height: 4vw;
+            line-height: 4vh;
             z-index: 1;
+            top: 4vh;
+            background-color: black;
+            padding-left: 5vw;
         }
         
        #collapseButton {
@@ -856,7 +859,11 @@ a.toolitem:hover {
            border: none;
            padding-top: 1%;
            padding-bottom: 1%;
+        font-size: 6vw;
+           padding-bottom: 2%;
         }
+        
+        
         
         
         
@@ -908,3 +915,26 @@ a.toolitem:hover {
         
         
     }
+    
+    
+    
+    
+    @media screen and (max-width: 600px) and (orientation: landscape) {
+    
+    
+    h3 {
+        font-size: 5vw;
+        text-align: left;
+    }
+    
+    h4 {
+        font-size: 3vw;
+    }
+    
+    p {
+        font-size: 2.4vw;
+    }    
+        
+    
+    }
+    
