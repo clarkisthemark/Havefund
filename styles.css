@@ -615,7 +615,7 @@
                                           }
                                           
                                           .footerback {
-                                              z-index: 2;
+                                              z-index: 3;
                                               background: black;
                                               position: relative;
                                           }
@@ -641,12 +641,14 @@
                                             width: 100%;
                                             height: 8px;
                                             background: #ccc;
+                                          
                                           }
                                           
                                           
                                           .progress-bar {
                                             height: 8px;
                                             width: 0%;
+                                             
                                           }
                                           
                                           .red {
@@ -733,6 +735,7 @@
                                               color: black;
                                               text-decoration: none;
                                               border: none;
+                                              
                                           }
                                           
                                           #collapseButton:active {
@@ -826,11 +829,15 @@
                                               #pagemenu {
                                                   background-color: black;
                                                   overflow: hidden;
+                                                  margin-top: 8%;
+                                          /*
                                                   margin-top: 4%;
                                                   padding-top: 4vw;
+                                          */
                                                   padding-bottom: 11vh;
                                                   z-index: 1;
                                                   width: 100%;
+                                              
                                               }
                                               
                                           .pagemenuitem {
@@ -852,7 +859,7 @@
                                                .toolsused {
                                                   line-height: 4vh;
                                                   z-index: 1;
-                                                  top: 4vh;
+                                                  top: 5vh;
                                                   background-color: black;
                                                   padding-left: 5vw;
                                                   max-width: 100%;
@@ -861,7 +868,7 @@
                                              #collapseButton {
                                               display: none;
                                               position: fixed;
-                                              top: 0vh;
+                                              top: 1vh;
                                               width: 100%;
                                               margin-bottom: 0;
                                               color: green;
@@ -871,8 +878,8 @@
                                                  padding-top: 1%;
                                                  padding-bottom: 1%;
                                               font-size: 6vw;
-                                                 padding-bottom: 2%;
-                                                 font-family: 'Paytone One', sans-serif;
+                                                 padding-bottom: 5%;
+                                                  font-family: 'Paytone One', sans-serif;
                                               }
                                               
                                               
