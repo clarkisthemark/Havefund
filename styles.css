@@ -732,7 +732,11 @@ a.toolitem:hover {
     justify-content: center;
 }
 
-
+#collapseButton {
+    display: none;
+    background-color: black;
+    
+}
 
 
                                     /* Responsive */
