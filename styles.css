@@ -733,13 +733,22 @@ a.toolitem:hover {
 }
 
 #collapseButton {
-    display: none !important;
+    display: none;
     background-color: black;
     color: black;
     text-decoration: none;
     border: none;
 }
 
+#collapseButton:active {
+    display: none;
+    color: black;
+}
+
+#collapseButton:visited {
+    display: none;
+    color: black;
+}
 
                                     /* Responsive */
  
