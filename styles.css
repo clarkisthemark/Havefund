@@ -756,7 +756,6 @@ a.toolitem:hover {
 
 
 */
-
 @media screen and (max-width: 600px) and (orientation: portrait) {
     /*  Index */
     
@@ -793,6 +792,8 @@ a.toolitem:hover {
     
     .headerdescription {
         font-size: 2.5vw;
+        max-width: 70vw;
+        line-height: 2vh;
     }
         
     .main-content {
@@ -800,16 +801,16 @@ a.toolitem:hover {
         }
     
     h3 {
-        font-size: 3.5vw;
+        font-size: 5vw;
         text-align: left;
     }
     
     h4 {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
     }
     
     p {
-        font-size: 2.2vw;
+        font-size: 3.2vw;
     }
     
         #pagemenu {
@@ -901,9 +902,9 @@ a.toolitem:hover {
         }
     
         .coinlogo {
-            max-height: 4vw;
+            max-height: 5vw;
         }
         
         
+        
     }
-
