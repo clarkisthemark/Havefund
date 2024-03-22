@@ -359,6 +359,60 @@ $(window).scroll(function() {
   
   
   
+  // This  code is it, although the pagemenu and toolsued stays appear when under 300scroll
+  
+  //document.addEventListener('DOMContentLoaded', function() {
+  //    var pagemenu = document.querySelector('#pagemenu');
+  //    var toolsused = document.querySelector('.toolsused');
+  //    var isCollapsed = true; // Flag to track menu state
+  //    var collapseButton = document.getElementById('collapseButton');
+  //    var menus = document.querySelectorAll('.menu');
+  //    var button = document.getElementById('collapseButton');
+  //
+  //    window.addEventListener('scroll', function() {
+  //        if (window.scrollY > 300) {
+  //            collapseButton.style.display = 'block';
+  //        } else {
+  //            collapseButton.style.display = 'none';
+  //        }
+  //
+  //        if (window.innerWidth > 700 && window.scrollY > 300 && isCollapsed) {
+  //            pagemenu.style.display = 'block';
+  //            toolsused.style.display = 'block';
+  //            isCollapsed = false;
+  //        } else if (window.innerWidth > 700 && window.scrollY <= 300 && !isCollapsed) {
+  //            pagemenu.style.display = 'none';
+  //            toolsused.style.display = 'none';
+  //            isCollapsed = true;
+  //        }
+  //    });
+  //
+  //    function toggleMenus() {
+  //        isCollapsed = !isCollapsed; // Toggle menu state
+  //        for (var i = 0; i < menus.length; i++) {
+  //            menus[i].style.display = isCollapsed ? 'none' : 'block';
+  //        }
+  //    }
+  //
+  //    button.addEventListener('click', function(event) {
+  //        toggleMenus();
+  //        event.stopPropagation(); // Prevent the click event from propagating further
+  //    });
+  //
+  //    document.addEventListener('click', function(event) {
+  //        if (window.innerWidth <= 700) { // Only collapse if window width is less than or equal to 700px
+  //            if (!button.contains(event.target)) { // If the clicked target is not the button
+  //                isCollapsed = true; // Collapse the menu
+  //                for (var i = 0; i < menus.length; i++) {
+  //                    menus[i].style.display = 'none';
+  //                }
+  //            }
+  //        }
+  //    });
+  //});
+  
+  
+  
   
   document.addEventListener('DOMContentLoaded', function() {
       var pagemenu = document.querySelector('#pagemenu');
@@ -375,14 +429,22 @@ $(window).scroll(function() {
               collapseButton.style.display = 'none';
           }
   
-          if (window.innerWidth > 700 && window.scrollY > 300 && isCollapsed) {
-              pagemenu.style.display = 'block';
-              toolsused.style.display = 'block';
-              isCollapsed = false;
-          } else if (window.innerWidth > 700 && window.scrollY <= 300 && !isCollapsed) {
-              pagemenu.style.display = 'none';
-              toolsused.style.display = 'none';
-              isCollapsed = true;
+          if (window.innerWidth > 700) {
+              if (window.scrollY > 300 && isCollapsed) {
+                  pagemenu.style.display = 'block';
+                  toolsused.style.display = 'block';
+                  isCollapsed = false;
+              } else if (window.scrollY <= 300 && !isCollapsed) {
+                  pagemenu.style.display = 'none';
+                  toolsused.style.display = 'none';
+                  isCollapsed = true;
+              }
+          } else {
+              // For window width under 700px, hide pagemenu and toolsused if scrollY is under 300
+              if (window.scrollY <= 300) {
+                  pagemenu.style.display = 'none';
+                  toolsused.style.display = 'none';
+              }
           }
       });
   
@@ -409,11 +471,6 @@ $(window).scroll(function() {
           }
       });
   });
-  
-  
-  
-  
-  
   
   
   
