@@ -235,6 +235,129 @@ $(window).scroll(function() {
   
   
   
+  //
+  //This is the setup, doesnt allow double clicking on toolsused and pagemenu
+  //
+  //document.addEventListener('DOMContentLoaded', function() {
+  //    var pagemenu = document.querySelector('#pagemenu');
+  //    var toolsused = document.querySelector('.toolsused');
+  //    var isCollapsed = true; // Flag to track menu state
+  //    var collapseButton = document.getElementById('collapseButton');
+  //    var menus = document.querySelectorAll('.menu');
+  //    var button = document.getElementById('collapseButton');
+  //
+  //    window.addEventListener('scroll', function() {
+  //        if (window.scrollY > 300) {
+  //            collapseButton.style.display = 'block';
+  //        } else {
+  //            collapseButton.style.display = 'none';
+  //        }
+  //
+  //        if (window.innerWidth > 700 && window.scrollY > 300 && isCollapsed) {
+  //            pagemenu.style.display = 'block';
+  //            toolsused.style.display = 'block';
+  //            isCollapsed = false;
+  //        } else if (window.innerWidth > 700 && window.scrollY <= 300 && !isCollapsed) {
+  //            pagemenu.style.display = 'none';
+  //            toolsused.style.display = 'none';
+  //            isCollapsed = true;
+  //        }
+  //    });
+  //
+  //    function toggleMenus() {
+  //        isCollapsed = !isCollapsed; // Toggle menu state
+  //        for (var i = 0; i < menus.length; i++) {
+  //            menus[i].style.display = isCollapsed ? 'none' : 'block';
+  //        }
+  //    }
+  //
+  //    button.addEventListener('click', function(event) {
+  //        toggleMenus();
+  //        event.stopPropagation(); // Prevent the click event from propagating further
+  //    });
+  //
+  //    document.addEventListener('click', function(event) {
+  //        if (!button.contains(event.target)) { // If the clicked target is not the button
+  //            isCollapsed = true; // Collapse the menu
+  //            for (var i = 0; i < menus.length; i++) {
+  //                menus[i].style.display = 'none';
+  //            }
+  //        }
+  //    });
+  //});
+  
+  
+  //This works although now the mobile menu needs clicked twice.
+  //
+  //document.addEventListener('DOMContentLoaded', function() {
+  //    var pagemenu = document.querySelector('#pagemenu');
+  //    var toolsused = document.querySelector('.toolsused');
+  //    var isCollapsed = true; // Flag to track menu state
+  //    var collapseButton = document.getElementById('collapseButton');
+  //    var menus = document.querySelectorAll('.menu');
+  //    var button = document.getElementById('collapseButton');
+  //
+  //    window.addEventListener('scroll', function() {
+  //        if (window.scrollY > 300) {
+  //            collapseButton.style.display = 'block';
+  //        } else {
+  //            collapseButton.style.display = 'none';
+  //        }
+  //
+  //        if (window.innerWidth > 700 && window.scrollY > 300 && isCollapsed) {
+  //            pagemenu.style.display = 'block';
+  //            toolsused.style.display = 'block';
+  //            isCollapsed = false;
+  //        } else if (window.innerWidth > 700 && window.scrollY <= 300 && !isCollapsed) {
+  //            pagemenu.style.display = 'none';
+  //            toolsused.style.display = 'none';
+  //            isCollapsed = true;
+  //        }
+  //    });
+  //
+  //    function toggleMenus() {
+  //        isCollapsed = !isCollapsed; // Toggle menu state
+  //        // Update the display property of pagemenu and toolsused directly
+  //        // instead of iterating through all menus
+  //        pagemenu.style.display = isCollapsed ? 'block' : 'none';
+  //        toolsused.style.display = isCollapsed ? 'block' : 'none';
+  //    }
+  //
+  //    button.addEventListener('click', function(event) {
+  //        // Toggle menus visibility
+  //        toggleMenus();
+  //        event.stopPropagation(); // Prevent the click event from propagating further
+  //    });
+  //
+  //    // Add click event listener to both pagemenu and toolsused
+  //    pagemenu.addEventListener('click', function(event) {
+  //        event.stopPropagation(); // Prevent the click event from propagating further
+  //    });
+  //
+  //    toolsused.addEventListener('click', function(event) {
+  //        event.stopPropagation(); // Prevent the click event from propagating further
+  //    });
+  //
+  //    // Add click event listener to the document to hide menus if clicked outside
+  //    document.addEventListener('click', function(event) {
+  //        if (!button.contains(event.target)) { // If the clicked target is not the button
+  //            isCollapsed = true; // Collapse the menu
+  //            pagemenu.style.display = 'none';
+  //            toolsused.style.display = 'none';
+  //        }
+  //    });
+  //});
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   document.addEventListener('DOMContentLoaded', function() {
@@ -276,12 +399,23 @@ $(window).scroll(function() {
       });
   
       document.addEventListener('click', function(event) {
-          if (!button.contains(event.target)) { // If the clicked target is not the button
-              isCollapsed = true; // Collapse the menu
-              for (var i = 0; i < menus.length; i++) {
-                  menus[i].style.display = 'none';
+          if (window.innerWidth <= 700) { // Only collapse if window width is less than or equal to 700px
+              if (!button.contains(event.target)) { // If the clicked target is not the button
+                  isCollapsed = true; // Collapse the menu
+                  for (var i = 0; i < menus.length; i++) {
+                      menus[i].style.display = 'none';
+                  }
               }
           }
       });
   });
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
