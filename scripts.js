@@ -64,33 +64,33 @@ $(window).scroll(function() {
   
   /* Scroll list appear */
   
-  /*
-  $(window).scroll(function(){
-  if($(window).scrollTop() > 500){
-      $("#pagemenu").fadeIn("fast");
-  }
-  });
-  $(window).scroll(function(){
-  if($(window).scrollTop() < 500){
-      $("#pagemenu").fadeOut("fast");
-      $("#myBar").fadeOut("fast");
-       $(".header").fadeOut("fast");
-  }
-  });
-            $(window).scroll(function(){
-  if($(window).scrollTop() > 500){
-      $(".toolsused").fadeIn("fast");
-        $("#myBar").fadeIn("fast");
-      $(".header").fadeIn("fast");
-  }
-  });
-  $(window).scroll(function(){
-  if($(window).scrollTop() < 500){
-      $(".toolsused").fadeOut("fast");
-  }
-  }); 
   
-  */
+  //$(window).scroll(function(){
+  //if($(window).scrollTop() > 500){
+  //    $("#pagemenu").fadeIn("fast");
+  //}
+  //});
+  //$(window).scroll(function(){
+  //if($(window).scrollTop() < 500){
+  //    $("#pagemenu").fadeOut("fast");
+  //    $("#myBar").fadeOut("fast");
+  //     $(".header").fadeOut("fast");
+  //}
+  //});
+  //          $(window).scroll(function(){
+  //if($(window).scrollTop() > 500){
+  //    $(".toolsused").fadeIn("fast");
+  //      $("#myBar").fadeIn("fast");
+  //    $(".header").fadeIn("fast");
+  //}
+  //});
+  //$(window).scroll(function(){
+  //if($(window).scrollTop() < 500){
+  //    $(".toolsused").fadeOut("fast");
+  //}
+  //}); 
+  
+  
   
   
   /* Responsive mobile Navbar */
@@ -106,74 +106,182 @@ $(window).scroll(function() {
   
   
   
+  
+  
+  
+  /*Working Mobile Menu, must click Menu*/
+  
+  
+  //document.addEventListener('DOMContentLoaded', function() {
+  //  var menuCollapsed = true; // Flag to track menu state
+  //
+  //  window.addEventListener('scroll', function() {
+  //      var pagemenu = document.getElementById('pagemenu');
+  //      if (window.scrollY > 300 && menuCollapsed) {
+  //          pagemenu.style.display = 'block';
+  //      } else {
+  //          pagemenu.style.display = 'none';
+  //      }
+  //  });
+  //
+  //  document.getElementById('collapseButton').addEventListener('click', function() {
+  //      var pagemenu = document.getElementById('pagemenu');
+  // 
+  //      if (menuCollapsed) {
+  //          pagemenu.style.display = 'none';
+  //      } else {
+  //          pagemenu.style.display = 'block';
+  //      }
+  //      menuCollapsed = !menuCollapsed; // Toggle menu state
+  //  });
+  //  
+  //  
+  //
+  //});
+  //
+  //
+  //document.addEventListener('DOMContentLoaded', function() {
+  //  var menusCollapsed = true; // Flag to track menus state
+  //
+  //  window.addEventListener('scroll', function() {
+  //      var menus = document.querySelectorAll('.menu');
+  //      if (window.scrollY > 300 && menusCollapsed) {
+  //          menus.forEach(function(menu) {
+  //              menu.style.display = 'block';
+  //          });
+  //      } else {
+  //          menus.forEach(function(menu) {
+  //              menu.style.display = 'none';
+  //          });
+  //      }
+  //  });
+  //
+  //  document.getElementById('collapseButton').addEventListener('click', function() {
+  //      var menus = document.querySelectorAll('.menu');
+  //      menus.forEach(function(menu) {
+  //          if (menusCollapsed) {
+  //              menu.style.display = 'none';
+  //          } else {
+  //              menu.style.display = 'block';
+  //          }
+  //      });
+  //      menusCollapsed = !menusCollapsed; // Toggle menus state
+  //  });
+  //});
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*Working Mobile menu to click anywhere on screen.   Desktop Pagemenu and toolsused are not appearing*/
+  //
+  
+  //window.addEventListener('scroll', function() {
+  //      var collapseButton = document.getElementById('collapseButton');
+  //      if (window.scrollY > 300) {
+  //          collapseButton.style.display = 'block';
+  //      } else {
+  //          collapseButton.style.display = 'none';
+  //      }
+  //  });
+  //
+  //
+  //
+  //
+  //document.addEventListener('DOMContentLoaded', function() {
+  //    var menus = document.querySelectorAll('.menu');
+  //    var button = document.getElementById('collapseButton');
+  //    var isCollapsed = true; // Flag to track menu state
+  //
+  //    window.addEventListener('scroll', function() {
+  //        if (window.scrollY > 500 && !isCollapsed) {
+  //            for (var i = 0; i < menus.length; i++) {
+  //                menus[i].style.display = 'block';
+  //            }
+  //        } else {
+  //            for (var i = 0; i < menus.length; i++) {
+  //                menus[i].style.display = 'none';
+  //            }
+  //        }
+  //    });
+  //
+  //    function toggleMenus() {
+  //        isCollapsed = !isCollapsed; // Toggle menu state
+  //        for (var i = 0; i < menus.length; i++) {
+  //            menus[i].style.display = isCollapsed ? 'none' : 'block';
+  //        }
+  //    }
+  //
+  //    button.addEventListener('click', function(event) {
+  //        toggleMenus();
+  //        event.stopPropagation(); // Prevent the click event from propagating further
+  //    });
+  //
+  //    document.addEventListener('click', function(event) {
+  //        if (!button.contains(event.target)) { // If the clicked target is not the button
+  //            isCollapsed = true; // Collapse the menu
+  //            for (var i = 0; i < menus.length; i++) {
+  //                menus[i].style.display = 'none';
+  //            }
+  //        }
+  //    });
+  //});
+  
+  
+  
+  
+  
   document.addEventListener('DOMContentLoaded', function() {
-    var menuCollapsed = true; // Flag to track menu state
+      var pagemenu = document.querySelector('#pagemenu');
+      var toolsused = document.querySelector('.toolsused');
+      var isCollapsed = true; // Flag to track menu state
+      var collapseButton = document.getElementById('collapseButton');
+      var menus = document.querySelectorAll('.menu');
+      var button = document.getElementById('collapseButton');
   
-    window.addEventListener('scroll', function() {
-        var pagemenu = document.getElementById('pagemenu');
-        if (window.scrollY > 300 && menuCollapsed) {
-            pagemenu.style.display = 'block';
-        } else {
-            pagemenu.style.display = 'none';
-        }
-    });
+      window.addEventListener('scroll', function() {
+          if (window.scrollY > 300) {
+              collapseButton.style.display = 'block';
+          } else {
+              collapseButton.style.display = 'none';
+          }
   
-    document.getElementById('collapseButton').addEventListener('click', function() {
-        var pagemenu = document.getElementById('pagemenu');
-   
-        if (menuCollapsed) {
-            pagemenu.style.display = 'none';
-        } else {
-            pagemenu.style.display = 'block';
-        }
-        menuCollapsed = !menuCollapsed; // Toggle menu state
-    });
-    
-    
+          if (window.innerWidth > 700 && window.scrollY > 300 && isCollapsed) {
+              pagemenu.style.display = 'block';
+              toolsused.style.display = 'block';
+              isCollapsed = false;
+          } else if (window.innerWidth > 700 && window.scrollY <= 300 && !isCollapsed) {
+              pagemenu.style.display = 'none';
+              toolsused.style.display = 'none';
+              isCollapsed = true;
+          }
+      });
   
+      function toggleMenus() {
+          isCollapsed = !isCollapsed; // Toggle menu state
+          for (var i = 0; i < menus.length; i++) {
+              menus[i].style.display = isCollapsed ? 'none' : 'block';
+          }
+      }
+  
+      button.addEventListener('click', function(event) {
+          toggleMenus();
+          event.stopPropagation(); // Prevent the click event from propagating further
+      });
+  
+      document.addEventListener('click', function(event) {
+          if (!button.contains(event.target)) { // If the clicked target is not the button
+              isCollapsed = true; // Collapse the menu
+              for (var i = 0; i < menus.length; i++) {
+                  menus[i].style.display = 'none';
+              }
+          }
+      });
   });
-  
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    var menusCollapsed = true; // Flag to track menus state
-  
-    window.addEventListener('scroll', function() {
-        var menus = document.querySelectorAll('.menu');
-        if (window.scrollY > 300 && menusCollapsed) {
-            menus.forEach(function(menu) {
-                menu.style.display = 'block';
-            });
-        } else {
-            menus.forEach(function(menu) {
-                menu.style.display = 'none';
-            });
-        }
-    });
-  
-    document.getElementById('collapseButton').addEventListener('click', function() {
-        var menus = document.querySelectorAll('.menu');
-        menus.forEach(function(menu) {
-            if (menusCollapsed) {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        });
-        menusCollapsed = !menusCollapsed; // Toggle menus state
-    });
-  });
-  
-  
-  
-  window.addEventListener('scroll', function() {
-        var collapseButton = document.getElementById('collapseButton');
-        if (window.scrollY > 300) {
-            collapseButton.style.display = 'block';
-        } else {
-            collapseButton.style.display = 'none';
-        }
-    });
-  
-  
-  
   
